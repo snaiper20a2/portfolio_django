@@ -1,0 +1,47 @@
+{% extends "galery/template.html" %}
+
+{% block title %}Портфолио Александра Имшенецкого{% endblock %}
+
+
+{% block banner %}
+<div class="breadcrumb_wrapper">
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li>{{current_section.name}}</li>
+    </ul>
+</div>
+<h1 class="heading_primary">{{current_section.name}}</h1>
+<!--<p class="heading_text">{{bio.text}}</p>-->
+{% endblock %}
+
+{% block galery %}
+<div class="container-fluid">
+    <!-- middle heading Start -->
+    <div class="tr_middle_heading">
+        <h1>Мои работы</h1>
+    </div>
+    <!-- middle heading End -->
+    <div class="row">
+        <div class="gallery_main">
+            {% for project in projects %}
+            {% for photo in project.photos %}
+            {% if forloop.first %}
+            <div class="col-lg-3 col-sm-4 col-xs-6 gallery_cover">
+                <div class="zoom wow" data-wow-duration="1.5s">
+                    <a href="{{photo.photo}}" title="Photoshoot">
+                        <img src="{{photo.thumbnail}}" alt="" class="img-responsive">
+                        <div class="overlay">
+                            <span class="link_icon"><i class="fa fa-search-plus"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <a style="display: none" href="{{photo.photo}}" title="Photoshoot"></a>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

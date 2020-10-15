@@ -1,0 +1,337 @@
+/*-------------Responsive css Start ---------------*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    .room_desc {
+        padding: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tr_contact_details {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .search_frm_cover .form_group .tour_search_btn {
+        padding: 11.5px 35px;
+    }
+
+    .srvc_list li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 991px) {
+    .search_frm_cover .form_group {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .search_frm_cover .form_group.search_button {
+        width: 50%;
+        margin-bottom: 0px;
+    }
+
+    .search_frm_cover .form_group .tour_search_btn {
+        margin-top: 10px;
+    }
+
+    .room_desc {
+        padding: 35px 20px;
+    }
+
+    .room_booking_form {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .preloader_inner {
+        width: 60px;
+        height: 60px;
+    }
+
+    /*=== Header menu Start ===*/
+    .tr_header_section {
+        padding-bottom: 15px;
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+
+    .caret_down {
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        color: #00c683;
+        font-size: 25px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .caret_down:before {
+        position: absolute;
+        content: "\f196";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        left: 0;
+        top: 0;
+    }
+
+    .caret_down.caret_up:before {
+        content: "\f147";
+    }
+
+    .header_right_menu {
+        width: 100%;
+        float: left !important;
+        text-align: left;
+    }
+
+    .header_right_menu {
+        float: left;
+        width: 100%;
+        position: absolute;
+        z-index: 111;
+        background: #ffffff;
+        border-top: 1px solid #00c683;
+        left: 0;
+        top: 74px;
+        padding: 40px 30px;
+        -webkit-transition: all 500ms cubic-bezier(0.480, 0, 0.535, 1);
+        -webkit-transition: all 500ms cubic-bezier(0.480, -0.050, 0.535, 1.370);
+        -moz-transition: all 500ms cubic-bezier(0.480, -0.050, 0.535, 1.370);
+        -o-transition: all 500ms cubic-bezier(0.480, -0.050, 0.535, 1.370);
+        transition: all 500ms cubic-bezier(0.480, -0.050, 0.535, 1.370);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        -o-transform: translateY(100px);
+    }
+
+    .header_right_menu.menu_open {
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header_right_menu ul.menu {
+        width: 100%;
+    }
+
+    .header_right_menu ul.menu li {
+        float: left;
+        margin-bottom: 10px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header_right_menu.menu_open > ul > li {
+        animation: fromleft .7s 1 both ease-in;
+        -webkit-animation: fromleft .7s 1 both ease-in;
+        -moz-animation: fromleft .7s 1 both ease-in;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(2) {
+        animation-delay: 200ms;
+        -webkit-animation-delay: 200ms;
+        -moz-animation-delay: 200ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(3) {
+        animation-delay: 300ms;
+        -webkit-animation-delay: 300ms;
+        -moz-animation-delay: 300ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(4) {
+        animation-delay: 400ms;
+        -webkit-animation-delay: 400ms;
+        -moz-animation-delay: 400ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(5) {
+        animation-delay: 500ms;
+        -webkit-animation-delay: 500ms;
+        -moz-animation-delay: 500ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(6) {
+        animation-delay: 600ms;
+        -webkit-animation-delay: 600ms;
+        -moz-animation-delay: 600ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(7) {
+        animation-delay: 700ms;
+        -webkit-animation-delay: 700ms;
+        -moz-animation-delay: 700ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(8) {
+        animation-delay: 800ms;
+        -webkit-animation-delay: 800ms;
+        -moz-animation-delay: 800ms;
+    }
+
+    .header_right_menu.menu_open > ul > li:nth-child(9) {
+        animation-delay: 900ms;
+        -webkit-animation-delay: 900ms;
+        -moz-animation-delay: 900ms;
+    }
+
+    .header_right_menu > ul > li > ul {
+        position: relative;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .header_right_menu > ul > li > ul:before {
+        display: none;
+    }
+
+    .header_right_menu > ul > li > ul > li {
+        padding-right: 20px;
+        margin-bottom: 0;
+    }
+
+    /*=== Header menu End ===*/
+    /*=== Footer Css Start ===*/
+    .tr_footer_section .pull_left {
+        float: left;
+        width: 100%;
+    }
+
+    .tr_footer_section .copyright_text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_social_icons {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .footer_social_icons li {
+        margin: 5px;
+    }
+
+    /*=== Footer Css End ===*/
+    /*--search form Start--*/
+    .search_tour_section {
+        margin-top: 0;
+    }
+
+    .search_frm_cover .form_group {
+        width: 100%;
+    }
+
+    /*--search form End--*/
+    /*-- about page css --*/
+    .srvc_list li {
+        width: 100%;
+    }
+
+    /*-- about page css --*/
+}
+
+@media (max-width: 991px) {
+    .tour_package_box {
+        max-width: 360px;
+    }
+
+    .blog_body {
+        max-width: 400px;
+    }
+
+    /*-- home slider css --*/
+    .tr_slider_caption {
+        margin: 120px 0;
+    }
+
+    .tr_slider_caption h1 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .tr_slider_caption p {
+        font-size: 19px;
+    }
+
+    /*-- home slider css --*/
+}
+
+@media (max-width: 600px) {
+    .tr_counter_section .block_1 {
+        width: 100%;
+    }
+
+    .room_services > li {
+        width: 100%;
+    }
+
+    .room_services > li:nth-child(2n+1) {
+        margin-right: 0;
+    }
+
+    .gallery_main .gallery_cover {
+        width: 100%;
+        display: table;
+        margin: 0 auto;
+        float: none;
+        max-width: 475px;
+    }
+}
+
+@media (max-width: 480px) {
+    .vdopopup_btn {
+        height: 40px;
+        width: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .faq_form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+    .room_booking_form .form_group.adult_child {
+        width: 100%;
+    }
+
+    .room_booking_form .form_group.adult {
+        margin-right: 0;
+    }
+}
+
+/*-------------Responsive css End ---------------*/

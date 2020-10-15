@@ -1,0 +1,72 @@
+{% extends "galery/template.html" %}
+
+{% block title %}Портфолио Александра Имшенецкого{% endblock %}
+
+{% block banner %}
+<div class="breadcrumb_wrapper">
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li>Контакты</li>
+    </ul>
+</div>
+<h1 class="heading_primary">Контакты</h1>
+<!--<p class="heading_text">{{bio.text}}</p>-->
+{% endblock %}
+
+{% block galery %}
+
+<div class="full_width tr_contact_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="tr_contact_form fromleft wow" data-wow-duration="1.5s">
+                    <h3>Оставить заявку</h3>
+                    <!--					<form>-->
+                    <!--						<input type="text" name="c_name" placeholder="Имя" class="c_inputs" id="c_name" required="required">-->
+                    <!--						<input type="email" name="c_email" placeholder="Email" class="c_inputs" id="c_email" required="required">-->
+                    <!--						<input type="text" name="c_phone" placeholder="Номер телефона" class="c_inputs" id="c_phone" required="required">-->
+                    <!--						<textarea class="text_area" placeholder="Сообщение" name="c_message" id="c_message"></textarea>-->
+                    <!--						<button type="button" value="Send" class="contact_sub green_btn" id="contact_sub">-->
+                    <!--							Отправить-->
+                    <!--						</button>-->
+                    <!--						-->
+                    <!--					</form>-->
+                    <form method="post">
+                        {%csrf_token%}
+                        {{form.as_p}}
+                        <input type="submit" class="contact_sub green_btn" value="Отправить">
+                        <div class="error_msg" id="err_msg">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="tr_contact_details">
+                    <h3>Социальные сети и мессенджеры</h3>
+                    <ul class="social_boxes">
+                        <li class="facebook_box zoom wow">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <span class="share_like">Facebook</span>
+                        </li>
+                        <li class="telegram_box zoom wow" data-wow-delay=".3s">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <span class="share_like">Telegram</span>
+                        </li>
+                    </ul>
+                    <div class="address_details">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li class="flipin wow" data-wow-delay="600ms">
+                                <span class="ad_icon"><i class="fa fa-envelope"></i></span> 80667831281@ukr.net
+                            </li>
+                            <li class="flipin wow" data-wow-delay="800ms">
+                                <span class="ad_icon"><i class="fa fa-phone"></i></span> +380 66 783 1281
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

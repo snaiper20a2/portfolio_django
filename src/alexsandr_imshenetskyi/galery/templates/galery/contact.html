@@ -44,14 +44,18 @@
                 <div class="tr_contact_details">
                     <h3>Социальные сети и мессенджеры</h3>
                     <ul class="social_boxes">
+                        {% if bio.facebook_url != ''%}
                         <li class="facebook_box zoom wow">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="{{bio.facebook_url}}"><i class="fab fa-facebook"></i></a>
                             <span class="share_like">Facebook</span>
                         </li>
+                        {% endif %}
+                        {% if bio.telegram_url != ''%}
                         <li class="telegram_box zoom wow" data-wow-delay=".3s">
-                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="{{bio.telegram_url}}"><i class="fab fa-telegram"></i></a>
                             <span class="share_like">Telegram</span>
                         </li>
+                        {% endif %}
                     </ul>
                     <div class="address_details">
                         <h3>Контакты</h3>

@@ -172,6 +172,14 @@ class Bio(models.Model):
         upload_to='face/',
         verbose_name='Аватар'
     )
+    facebook_url = models.URLField(
+        verbose_name='Ccылка на профиль Фейсбук',
+        blank=True
+    )
+    telegram_url = models.URLField(
+        verbose_name='Ccылка на Телеграм',
+        blank=True
+    )
 
     class Meta:
         verbose_name = 'Блок биографии'

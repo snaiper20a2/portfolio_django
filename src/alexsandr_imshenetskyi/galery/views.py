@@ -36,7 +36,9 @@ class Contact(CreateView):
 
 
 def get_bio():
-    return Bio.objects.get(id=1)
+    bio = Bio.objects.get(id=1)
+    print(bio.telegram_url)
+    return bio
 
 
 def get_projects(project_type='all'):
@@ -58,7 +60,6 @@ def get_projects(project_type='all'):
 
 def get_sections():
     return ProjectTypes.objects.all()
-
 # def get_page_list(length, cur_page):
 #     page_list = {}
 #     if length == 1:
